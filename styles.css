@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: auto;
+    height: auto;
+    background: linear-gradient(#dffff5, #ffdff0);;
+}
+
+.cover {
+    width: auto;
+}
+
+.breadcrumb {
+    margin: 30px 50px 10px 50px;
+    color: #565959;
+}
+
+.main-img {
+    box-shadow: 0px 2px 5px lightgray;
+    margin: 0px 30px 50px 20px;
+    width: 600px;
+}
+
+.info {
+    width: 700px;
+    margin-right: 50px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 8px;
+    color: transparent;
+}
+
+ .wavy {
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 8px;
+
+    /* animating rainbow gradient */
+    background: linear-gradient(to right, #6666ff, #0099ff, #00f5ac, #00ff00, #f55200, #f5007f, #f500e5, #9f00f5, #1e1eff, #0099ff, #00f5ac); /* Setting the background to a linear gradient */
+    -webkit-background-clip: text;
+    background-clip: text; /* setting background to clip the text */
+    background-size: 400% 100%;
+    color: transparent; /* setting the text transparent */
+
+    animation: wavy 3s ease infinite, rainbow_animation 5s ease-in-out infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes rainbow_animation {
+    /* moving the background left to right to create rainbow effect */
+    0% {background-position: 0 0;}
+    50% {background-position: 50% 0;}
+    100% {background-position: 100% 0;}
+}
+
+@keyframes wavy {
+    /* moving each span up and down to create a wavy effect */
+    0%, 100% {top: 0px;}
+    50% {top: -10px;}
+}
+
+.author {
+    font-size: 18px;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+.subject {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes jiggle-jiggle {
+    0%, 50%, 100% {
+        transform: translate(0px 0px);
+    }
+    25%, 75% {
+        transform: translate(0px 5px);
+    }
+}
+
+.description {
+    font-size: 18px;
+}
